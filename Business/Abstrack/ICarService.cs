@@ -8,6 +8,9 @@ namespace Business.Abstrack
     public interface ICarService
     {
 
-        List<Cars> GetAll();
+        List<Cars> GetCarsByBrandId();
+        List<Cars> GetCarsByBrandId(int Id);
+        List<Cars> GetCarsByColorId(int Id);
+
     }
 }

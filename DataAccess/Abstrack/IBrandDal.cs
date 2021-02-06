@@ -5,8 +5,7 @@ using System.Text;
 
 namespace DataAccess.Abstrack
 {
-    public interface ICarsDal:IEntityRepostory<Cars>
+    public interface IBrandDal:IEntityRepostory<Colors>
     {
-
     }
 }
