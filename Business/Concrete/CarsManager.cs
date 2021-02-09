@@ -1,34 +1,45 @@
 ﻿using Business.Abstrack;
 using DataAccess.Abstrack;
 using Entities.Concrete;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Business.Concrete
 {
     public class CarsManager : ICarService
-        
+
     {
-        ICarsDal  _carsdal;
-        public CarsManager (ICarsDal carsDal)
+        ICarsDal _carDal;
+
+        public CarsManager(ICarsDal carsDal)
         {
-            _carsdal = carsDal;
+            _carDal = carsDal;
         }
 
-        public List<Cars> GetCarsByBrandId()
+        public List<Cars> GetAll()
         {
-            return _carsdal.GetAll();
+            return _carDal.GetAll();
         }
 
-        public List<Cars> GetCarsByBrandId(int Id)
-        {
-            return _carsdal.GetAll(p => p.BrandId == Id);
-        }
-
-        public List<Cars> GetCarsByColorId(int Id)
-        {
-            return _carsdal.GetAll(p => p.ColorId == Id);
-        }
+        
     }
 }
+
+
+
+
+
+
+//public List<Cars> GetAll()
+//{
+    
+//}
+
+//public List<Cars> GetCarsByBrandId(int Id)
+//{
+//    return _carsdal.GetCarsByBrandId(p => p.BrandId == Id);
+//}
+
+//public List<Cars> GetCarsByColorId(int Id)
+//{
+//    return _carsdal.GetCarsByColorId(p => p.ColorId == Id);
+//}

@@ -1,9 +1,9 @@
-﻿using Entities.Abstrack;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace DataAccess.Abstrack
+namespace Core.DataAccess
 {
     public interface IEntityRepostory<T> where T : class, IEntity, new()
     {

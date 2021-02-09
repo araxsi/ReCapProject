@@ -7,10 +7,7 @@ namespace Business.Abstrack
 {
     public interface ICarService
     {
-
-        List<Cars> GetCarsByBrandId();
-        List<Cars> GetCarsByBrandId(int Id);
-        List<Cars> GetCarsByColorId(int Id);
-
+        List<Cars> GetAll();
+        
     }
 }
