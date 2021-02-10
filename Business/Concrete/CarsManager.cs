@@ -1,6 +1,7 @@
 ﻿using Business.Abstrack;
 using DataAccess.Abstrack;
 using Entities.Concrete;
+using Entities.DTOs;
 using System.Collections.Generic;
 
 namespace Business.Concrete
@@ -8,19 +9,22 @@ namespace Business.Concrete
     public class CarsManager : ICarService
 
     {
-        ICarsDal _carDal;
+        ICarDetail _carDal;
 
-        public CarsManager(ICarsDal carsDal)
+        public CarsManager(ICarDetail carsDal)
         {
             _carDal = carsDal;
         }
 
-        public List<Cars> GetAll()
-        {
-            return _carDal.GetAll();
-        }
+        //public List<RentCarDetailDto> GetAll()
+        //{
+        //    return _carDal.GetAll();
+        //}
 
-        
+        public List<RentCarDetailDto> GetCartDetails()
+        {
+            return _carDal.GetCarDetailDtos();
+        }
     }
 }
 

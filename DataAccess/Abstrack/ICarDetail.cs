@@ -8,8 +8,9 @@ using System.Text;
 
 namespace DataAccess.Abstrack
 {
-    public interface ICarsDal:IEntityRepostory<Cars>
+    public interface ICarDetail: IEntityRepostory<Cars>
     {
-      
+        List<RentCarDetailDto> GetAll();
+        List<RentCarDetailDto> GetCarDetailDtos(Expression<Func<Cars, bool>> filter = null);
     }
 }
