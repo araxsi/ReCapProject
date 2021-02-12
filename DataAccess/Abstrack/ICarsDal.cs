@@ -10,6 +10,6 @@ namespace DataAccess.Abstrack
 {
     public interface ICarsDal:IEntityRepostory<Cars>
     {
-      
+        List<RentCarDetailDto> GetCarDetails();
     }
 }
