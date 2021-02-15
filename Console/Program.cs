@@ -19,7 +19,7 @@ namespace ConsoleUI2
 
         private static void GetCarDetailTest()
         {
-            CarsManager carManager = new CarsManager(new EfCarDal());
+            CarManager carManager = new CarManager(new EfCarDal());
             foreach (var item in carManager.GetCarDetails().Data)
             {
                 Console.WriteLine(item.BrandName + " " + item.ColorName + " " + item.Description);
@@ -48,7 +48,7 @@ namespace ConsoleUI2
 
         private static void GetAllTest()
         {
-            CarsManager carManager = new CarsManager(new EfCarDal());
+            CarManager carManager = new CarManager(new EfCarDal());
             carManager.Add(new Cars { ColorId = 2, BrandId = 2, DailyPrice = 550, ModelYear = 2010, Description = "Woswogen Jetta Üst segment" });
             carManager.Add(new Cars { ColorId = 1, BrandId = 1, DailyPrice = 450, ModelYear = 2015, Description = "Mercedes E Serisi" });
             carManager.Add(new Cars { ColorId = 3, BrandId = 3, DailyPrice = 330, ModelYear = 2017, Description = "Fiat Tuston" });
