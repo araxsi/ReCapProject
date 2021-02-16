@@ -14,10 +14,7 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfCarDal : EfEntityRepositoryBase<Cars, CarDbContext>, ICarsDal
     {
-        public List<RentCarDetailDto> GetCarDetails()
-        {
-            throw new NotImplementedException();
-        }
+    
     }
 }
 

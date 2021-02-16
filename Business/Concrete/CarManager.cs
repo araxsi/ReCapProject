@@ -6,15 +6,15 @@ using Entities.Concrete;
 using Entities.DTOs;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using DataAccess.Concrete.EntityFramework;
+
+
 
 namespace Business.Concrete
 {
     public class CarManager : ICarService
     {
         ICarsDal _carDal;
-        public CarManager(EfCarDal carDal)
+        public CarManager(ICarsDal carDal)
         {
             _carDal = carDal;
         }
@@ -53,12 +53,12 @@ namespace Business.Concrete
 
         public IDataResult<List<RentCarDetailDto>> GetCarDetails()
         {
-            return new SuccessDataResult<List<RentCarDetailDto>>(_carDal.GetCarDetails());
+            throw new NotImplementedException();
         }
 
         public IDataResult<List<Cars>> GetCarsByBrandId(int id)
         {
-            return new SuccessDataResult<List<Cars>>(_carDal.GetAll(c => c.ColorId == id));
+            return new SuccessDataResult<List<Cars>>(_carDal.GetAll(c => c.BrandId == id));
         }
 
         public IDataResult<List<Cars>> GetCarsByColorId(int id)
