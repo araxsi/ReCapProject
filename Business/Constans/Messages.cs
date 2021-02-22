@@ -16,5 +16,7 @@ namespace Business.Constans
         public static string CarUpdate = "Seçili araba güncellenmiştir";
         public static string UserAdd = "Kullanıcı eklendi";
         public static string RentalInvalid = "Araç suan başka bir müsterinin kullanımındadır.";
+        public static string BrandListed = "Modeller Listelendi";
+        public static string ColorListed = "Renkler Listelendi";
     }
 }

@@ -23,7 +23,7 @@ namespace DataAccess.Concrete.EntityFramework
             {
 
               var result = from ca in filter is null ? context.Cars : context.Cars.Where(filter)
-                           join br in context.Brands
+                           join br in context.Models
                            on ca.BrandId equals br.BrandId
                            join co in context.Colors
                            on ca.ColorId equals co.ColorId

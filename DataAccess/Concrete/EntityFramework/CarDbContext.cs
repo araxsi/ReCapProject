@@ -13,7 +13,7 @@ namespace DataAccess.Concrete.EntityFramework
             //DB Bilgilerinin giriş yaptığı alandır.
             optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=RentDB;Trusted_Connection=true");
         }
-        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Brand> Models { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<Cars> Cars { get; set; }
 
